@@ -1,0 +1,35 @@
+﻿Unity3d机制性能问题：
+1. 减少Find, FindGameObjectWithTag,GetComponent等函数，特别是在每帧中使用，应尽可能在Awake, Start函数里面查找，并缓存起来，以便于多次调用。
+2. 劲量不要使用SendMessage, BroadCastMessage, SendMessageUpwards函数，特别是没帧中使用。如需要应当使用Delegate替代。
+3. 不应当在每帧中改变transform.localscale，这样效率会比较慢。
+4. 如果是想比较两个向量的长度，用sqrMagnitude可以快出很多.
+5. 当一个脚本挂在一个gameObject上面的时候。如果不需要Update函数的时候就删掉它。 在创建一个新脚本的时候，系统会自动加入一个空的Update函数，如果你不使用它的话就把它删掉。 
+6. 尽量不要使用FixedUpdate()函数。 这种函数在每一个物体的每一个脚本中每秒调用50-100次。如果可以的话尽量把这个函数里面的东西放在Update()函数中执行。 
+
+C#的性能问题：
+1. 不应当在每帧中或者频繁的new 对象或数组。这样会频繁的造成垃圾内存而导致过多的垃圾收集，效率比较慢。如需要可以使用对象池去管理。
+2. 多个脚本都需要使用的数据，应采用static类型(或者单例)实现。
+3. 尽量避免直接使用foreach, mono实现的foreach会造成过多内存开销，可以使用多声明一个List<>之类的方式然后用for去遍历，如果一定需要遍历Dictionary的容器可以使用GetEnumerator去遍历。
+4减少不必要的循环或者每帧中的循环。
+5.在使用Dictionary的时候，也尽量不要把string类型作为Key，因为每次通过字符串添加和查找的时候，都会hash字符串。字符串越长，查找次数越多效率越低。
+6.慎重使用c#高级特性。如c# 4.0的Linq语句，它也会造成过多内存碎片。
+
+对象创建性能问题：
+1．对于频繁创建和销毁的对象，在实例化对象的时候会有性能开销，特别是带有碰撞体的，应当使用对象池机制来优化，如子弹，特效，NPC，等。
+3. 对于一些在需要在脚本里实时计算的运算。
+
+物理引擎性能问题：
+1．尽量不要使用MeshCollider作为碰撞体。如一定要使用，也应当尽可能减少网格碰撞体的面数，又或者使用Unity3d原生碰撞体，Sphere, Box, Capsule的组合来替代使用MeshCollider。
+2．使用CharacterController的使用，在有用到CharacterController的时候我们应当去平衡到底是使用CharacterController还是使用Rigidbody + CapsuleCollider的方案。
+	因为CharacterController对比Rigidbody + CapsuleCollider在物体较多的情况下，后者明显性能高很多。如一定需要使用CharacterController也不要在一帧中多次调用Move或SimpleMove函数。
+
+最后一点，不管是任何人。
+如果要使用unity3d的插件前，请一定要仔细评估该插件的源码。
+
+二、代码风格
+1.变量命名规范:
+变量名采用首单词小写，后面单词大写的形式，如gameWorld，
+成员变量采用m_开头，如m_gameWorld，
+静态成员变量采用ms_开头，如ms_gameWorld，
+成员函数每个单词首字母大写，如EnterGameWorld()
+初始化的顺序应和反初始化的顺序相反，如初始化的顺序为A,B,C,D,那么反初始化应当为D,C,B,A。

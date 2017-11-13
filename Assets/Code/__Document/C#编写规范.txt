@@ -1,0 +1,47 @@
+﻿
+新手游项目C#编写规范
+
+命名规范
+	采用Pascal/camel命名法 
+	Pascal	示例：StringBuilder	Camel	示例：bufferLength
+	类型		Pascal 				示例：Controller
+	接口 		Pascal 				示例：IFormatable
+	方法 		Pascal 				示例：UpdateData()
+	属性 		Camel 				示例：public int length{ get{}set{} }
+	私有字段 	下划线+Camel		示例：private int _length
+	非私有字段 	Camel 				示例：public int length	
+	委托 		Pascel 				示例：public delegate void VoidDelegate(GameObject go);
+	常量		大写+下划线 		示例：USER_NAME
+	参数		Camel 				示例：public void UpdateData（string fieldName）
+	局部变量 	Camel 				示例：string fieldName;
+
+	MVC类：后缀分别为Controller、Model、View
+	泛型单例类：Singleton开头+[单例基类] SingletonEventtDispatcher
+	单例类：选择继承于泛型单例类，或者自行实现，相关属性命名参考泛型单例类
+	Manager：静态类，只包含静态函数
+
+代码风格
+	行宽：代码应尽量不超过80个字符宽度，超过时建议换行，换行后的代码要缩进一个Tab
+	申明：多个同类申明不要写在同一行
+	字段和方法：类内部的顺序应该是：静态字段、字段、方法（私有字段如果只在某个方法内使用，可以写在该方法的前面）
+	空格：略
+	注释：略
+	适当使用 #region XXX #endregion 折叠代码块，#region之前要添加注释
+
+项目相关
+	
+	协议类：发送类用C+协议号，接收类写在发送类同一文件内，命名用S+协议号，文件名用发送类名
+	与服务器公用的数据如果出现浮点数，统一乘以1000变为int或者short，如python生成的配置和协议中数据
+	对插件进行的修改，应该在该规范文件同一目录下的《插件源码修改记录》中写清楚，方便日后升级插件 
+
+文件结构：
+	代码文件夹统一以下划线+大写字母开头
+	在_GameLogic下面建文件夹专门存放某个模块的代码，把该模块代码都在该文件夹下，模块较大时可以在模块文件夹内建立_Controller、_Model和_View文件夹
+	协议类放在_Net/_Cmd下面，按协议前两位分文件夹存放，如12001协议放在 _Net/_Cmd/_C12下面
+	编辑器类在Editor下面按功能放置
+	配置相关类放在_Config/_Entity下
+	Manager类按使用范围放在模块文件夹内或者_Manager下面
+
+其他
+	属性和方法的选择：对于有副作用的操作，使用方法而不是get/set
+	字符串的拼接开销很大，要使用string.Format(方便进行翻译)和StringBuilder(提高效率)代替

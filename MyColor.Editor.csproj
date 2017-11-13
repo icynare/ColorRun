@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{672A2A93-9967-20BB-5F99-85C27751F32B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile>Assets\mcs.rsp</CompilerResponseFile>
+    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.5.2f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.EditorTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.EditorTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.PlaymodeTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PlaymodeTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>Library\UnityAssemblies\UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Assets\Plugins\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ConsolePro.Editor">
+      <HintPath>Assets\ThirdPlugins\ConsolePro\Editor\ConsolePro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiEditor">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DOTween\DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DOTween\DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DOTween\DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>Assets\ThirdPlugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="ForEach">
+      <HintPath>Assets\ThirdPlugins\ForEach\ForEach.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MyColor.csproj">
+      <Project>{1649788C-9792-16F6-5732-4E3EC43E07F3}</Project>
+      <Name>MyColor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\BuildReport\Scripts\Editor\BRT_VersionInfo.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\ApproximatelyEquals.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\FuzzyStringComparisonOptions.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\FuzzyStringComparisonTolerance.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\HammingDistance.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\JaccardDistance.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\JaroDistance.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\JaroWinklerDistance.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\LevenshteinDistance.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\LongestCommonSubsequence.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\LongestCommonSubstring.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\Operations.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\OverlapCoefficient.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\RatcliffObershelpSimilarity.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\SorensenDiceDistance.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\FuzzyString\TanimotoCoefficient.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Options\BRT_FileFilters.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Options\BRT_FiltersUsed.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Options\BRT_Options.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\ReportData\BRT_AssetList.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\ReportData\BRT_BuildInfo.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\ReportData\BRT_BuildPlatformType.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\ReportData\BRT_BuildSettingsCategoryType.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\ReportData\BRT_SizePart.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\ReportData\BRT_UnityBuildSettings.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\ReportGeneration\BRT_ReportGenerator.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\ReportGeneration\BRT_UnityBuildSettingsUtility.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Utility\BRT_LibCacheUtil.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Utility\BRT_Util.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Utility\DldUtil_BackwardFileReader.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Utility\DldUtil_BigFileReader.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Utility\DldUtil_GetRspDefines.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Utility\DldUtil_TraverseDirectory.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Utility\DldUtil_UnityVersion.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\BRT_BuildReportWindow.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\BRT_WindowLabels.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\BRT_WindowSettings.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\BRT_WindowUtility.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_AssetListScreen.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_BaseScreen.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_BuildSettingsScreen.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_HelpScreen.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_OptionsScreen.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_OverviewScreen.cs" />
+    <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_SizeStatsScreen.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\AssetBundleBuilder.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\AssetBundleChecker.cs" />
+    <Compile Include="Assets\Editor\ChangeScriptTemplet.cs" />
+    <Compile Include="Assets\Editor\EditorHelper.cs" />
+    <Compile Include="Assets\Editor\FindMissingScriptsRecursively.cs" />
+    <Compile Include="Assets\Editor\FindReferences.cs" />
+    <Compile Include="Assets\Editor\PBX\PBXProjectSetting.cs" />
+    <Compile Include="Assets\Editor\PBX\XCPlist.cs" />
+    <Compile Include="Assets\Editor\PBX\XClass.cs" />
+    <Compile Include="Assets\Editor\ResourceChecker.cs" />
+    <Compile Include="Assets\Editor\TestTool\NetTestWindow.cs" />
+    <Compile Include="Assets\Editor\UI\BMFontCreator.cs" />
+    <Compile Include="Assets\Editor\UI\CreateUICode.cs" />
+    <Compile Include="Assets\Editor\UI\FindNoRefTextures.cs" />
+    <Compile Include="Assets\Editor\UI\GUIExtWindow.cs" />
+    <Compile Include="Assets\Editor\UI\TextChecker.cs" />
+    <Compile Include="Assets\Editor\project\BuildTool.cs" />
+    <Compile Include="Assets\Editor\project\BuildWindow.cs" />
+    <Compile Include="Assets\Editor\project\MacroEditor.cs" />
+    <Compile Include="Assets\Editor\project\PreSetVersion.cs" />
+    <Compile Include="Assets\Editor\project\SwitchPlatformEditor.cs" />
+    <Compile Include="Assets\ThirdPlugins\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\EditorConst.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\EditorPath.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\EditorRegex.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\EditorTool.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\TableView\PAChartDataSet.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\TableView\PAEditorConst.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\TableView\PAEditorUtil.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\TableView\TableView.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\TableView\TableViewAppr.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\TableView\TableViewColDesc.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\TableView\TableViewDemoWindow.cs" />
+    <Compile Include="Assets\ThirdPlugins\EditorCommon\Editor\TableView\TableView_Impl.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\AndroidPlugin.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\Autorun.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\BuildPostProcessor.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\EditorConstants.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\Installer.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\Log.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\LunarConsoleActionsEditor.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\LunarConsoleEditor.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\LunarConsoleEditorAnalytics.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\LunarConsoleHttpClient.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\MenuItems.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\SimpleJSON.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\UI\ActionsAndVariablesWindow.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\Updater.cs" />
+    <Compile Include="Assets\ThirdPlugins\LunarConsole\Editor\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\BuildReport\BuildReportToolOptions.xml" />
+    <None Include="Assets\BuildReport\README.txt" />
+    <None Include="Assets\BuildReport\Scripts\Editor\FuzzyString\License.txt" />
+    <None Include="Assets\BuildReport\VERSION.txt" />
+    <None Include="Assets\Code\__Document\C#编写规范.txt" />
+    <None Include="Assets\Code\__Document\注意事项.txt" />
+    <None Include="Assets\Plugins\Google.Protobuf.xml" />
+    <None Include="Assets\Resources\UI-DefaultETC1.shader" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTween\DOTween43.xml" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTween\DOTween46.xml" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTween\DOTween50.xml" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTweenPro\DOTweenPro.XML" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.XML" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\ThirdPlugins\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+    <None Include="Assets\ThirdPlugins\Demigiant\readme_DOTweenPro.txt" />
+    <None Include="Assets\ThirdPlugins\EditorCommon\BuildReport\BuildReportToolOptions.xml" />
+    <None Include="Assets\ThirdPlugins\LunarConsole\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
