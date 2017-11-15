@@ -1,6 +1,6 @@
 /*********************************************************************
-* Autor：xiaozhang 
-* Mail：mobile@talkmoney.cn
+* Author：ChenKaiBin 
+* Mail：ChenKaiBin@talkmoney.cn
 * CreateTime：2017/10/30 11:46:29
 * Description：
 
@@ -22,7 +22,7 @@ public class MyPoolManager {
         MyPoolGroup mypool;
         if (!poolList.ContainsKey(name))
         {
-            Debug.Log(">>>PoolName" + name);
+            Debug.Log(">>>PoolName:" + name);
             mypool = new MyPoolGroup(obj);
             poolList.Add(name, mypool);
         }

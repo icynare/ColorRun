@@ -228,6 +228,7 @@
     <Compile Include="Assets\Editor\UI\CreateUICode.cs" />
     <Compile Include="Assets\Editor\UI\FindNoRefTextures.cs" />
     <Compile Include="Assets\Editor\UI\GUIExtWindow.cs" />
+    <Compile Include="Assets\Editor\UI\MyShortCut.cs" />
     <Compile Include="Assets\Editor\UI\TextChecker.cs" />
     <Compile Include="Assets\Editor\project\BuildTool.cs" />
     <Compile Include="Assets\Editor\project\BuildWindow.cs" />

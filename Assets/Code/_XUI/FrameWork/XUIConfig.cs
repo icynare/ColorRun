@@ -10,7 +10,8 @@ public class XUIConfig
     public XUIConfig()
     {
         viewType.Add(XViewID.BackGroundView, typeof(BackGroundView));
-
+        viewType.Add(XViewID.MapView, typeof(MapView));
+        viewType.Add(XViewID.GameOverView, typeof(GameOverView));
     }
 }
 
@@ -22,7 +23,8 @@ public enum XViewID
     ConfirmView,
 
     BackGroundView,
-    
+    MapView,
+    GameOverView
 }
 
 //按需加group 3/3

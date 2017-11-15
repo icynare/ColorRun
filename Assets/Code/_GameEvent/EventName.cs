@@ -28,6 +28,11 @@ public enum EventName
     //New
     ShowBack,
 
+    //SomeThing
+    EatGoods,
+    TouchStop,
+    GameOver,
+
     GECount,
     ReFocus,
     ForceReconnect

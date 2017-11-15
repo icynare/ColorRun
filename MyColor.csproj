@@ -17,8 +17,7 @@
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.2f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -118,6 +117,7 @@
     <Compile Include="Assets\Code\_GameEvent\QuickList.cs" />
     <Compile Include="Assets\Code\_GameLogic\BackGroundView\BackController.cs" />
     <Compile Include="Assets\Code\_GameLogic\BackGroundView\BackGroundView.cs" />
+    <Compile Include="Assets\Code\_GameLogic\BackGroundView\BackModel.cs" />
     <Compile Include="Assets\Code\_GameLogic\BackGroundView\Player.cs" />
     <Compile Include="Assets\Code\_GameLogic\Cheat\PingCheat.cs" />
     <Compile Include="Assets\Code\_GameLogic\Client.cs" />
@@ -126,7 +126,16 @@
     <Compile Include="Assets\Code\_GameLogic\Common\Message.cs" />
     <Compile Include="Assets\Code\_GameLogic\Common\WholeData.cs" />
     <Compile Include="Assets\Code\_GameLogic\Constant.cs" />
+    <Compile Include="Assets\Code\_GameLogic\GameOver\GameOverController.cs" />
+    <Compile Include="Assets\Code\_GameLogic\GameOver\GameOverView.cs" />
     <Compile Include="Assets\Code\_GameLogic\LogicModules.cs" />
+    <Compile Include="Assets\Code\_GameLogic\Map\GoodsScript\BigGoods.cs" />
+    <Compile Include="Assets\Code\_GameLogic\Map\GoodsScript\GoodsBase.cs" />
+    <Compile Include="Assets\Code\_GameLogic\Map\GoodsScript\SmallGoods.cs" />
+    <Compile Include="Assets\Code\_GameLogic\Map\MapController.cs" />
+    <Compile Include="Assets\Code\_GameLogic\Map\MapView.cs" />
+    <Compile Include="Assets\Code\_GameLogic\Map\StopScript\CommonStop.cs" />
+    <Compile Include="Assets\Code\_GameLogic\Map\StopScript\StopBase.cs" />
     <Compile Include="Assets\Code\_Manager\AudioManager.cs" />
     <Compile Include="Assets\Code\_Manager\ColorManager.cs" />
     <Compile Include="Assets\Code\_Manager\CoroutineManager.cs" />

@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public abstract class XUIViewBase
 {
-
-
     public XViewID _id;
 
     GameObject _root;
